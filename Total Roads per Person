@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+   
+Data = {'Year': [2020,2025, 2030, 2035, 2040, 2045, 2050, 2055, 2060, 2065, 2070],
+        'km': [5177.76, 5104.4, 5099.12,5121.88,5171.08,5238.63,5326.12,5430.82,5557.75,5713.8,5895.2]
+       }
+df = pd.DataFrame(Data,columns=['Year','km'])
+
+New_Colors = ['green','blue','purple','brown','teal','yellow','red','black','orange']
+plt.bar(df['Year'], df['km'], color=New_Colors)
+plt.title('Total roads per person', fontsize=20,color='grey')
+plt.xlabel('Years 2020-2070', fontsize=16,color='blue')
+plt.ylabel('Kilometrs per million people', fontsize=16,color='blue')
+plt.grid(False)
+plt.show()
